@@ -1,5 +1,7 @@
 package com.hryesf;
 
+import com.hryesf.domain.PlugBoard;
+
 public class Main {
     public static void main(String[] args) throws IllegalAccessException {
         PlugBoard plugboard = new PlugBoard("ABCDEFGHIJKLMNOPQRST");
