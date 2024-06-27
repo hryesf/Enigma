@@ -3,6 +3,7 @@ package com.hryesf;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 import com.hryesf.Exceptions.DuplicateLetterException;
+import com.hryesf.Exceptions.EvenNumberException;
 import com.hryesf.Exceptions.MaxWireException;
 
 import java.util.HashSet;
@@ -16,8 +17,12 @@ public class Plugboard {
     public Plugboard(String wires) throws IllegalAccessException {
         this.wires = wires;
 
-        if (wires == null || wires.isEmpty() || wires.length() % 2 != 0) {
+        if (wires == null || wires.isEmpty()) {
             throw new IllegalAccessException("Invalid wire configuration.");
+        }
+
+        if (wires.length() % 2 != 0){
+            throw new EvenNumberException();
         }
 
         if (wires.length()/2 > 10){
