@@ -1,7 +1,12 @@
 package com.hryesf;
 
+import com.hryesf.Exceptions.DuplicateLetterException;
+import com.hryesf.Exceptions.MaxWireException;
+
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class Plugboard {
 
