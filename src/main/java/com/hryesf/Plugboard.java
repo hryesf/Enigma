@@ -1,6 +1,6 @@
 package com.hryesf;
 
-import java.util.InputMismatchException;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Plugboard {
