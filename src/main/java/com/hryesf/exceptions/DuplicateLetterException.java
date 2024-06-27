@@ -1,4 +1,4 @@
-package com.hryesf.Exceptions;
+package com.hryesf.exceptions;
 
 public class DuplicateLetterException extends RuntimeException{
     public DuplicateLetterException(){
