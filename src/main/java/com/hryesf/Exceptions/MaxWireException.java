@@ -1,4 +1,4 @@
-package com.hryesf;
+package com.hryesf.Exceptions;
 
 public class MaxWireException extends RuntimeException{
     public MaxWireException(){
