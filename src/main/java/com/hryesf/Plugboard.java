@@ -8,9 +8,11 @@ public class Plugboard {
     private final String wires;
     private final Map<Character, Character> WIREMAP;
 
-    public Plugboard(Map<Character, Character> map) throws IllegalAccessException {
-        if (map == null || map.isEmpty() || map.size() % 2 != 0) {
-            throw new IllegalAccessException("Invalid wires configuration.");
+    public Plugboard(String wires) throws IllegalAccessException {
+        this.wires = wires;
+
+        if (wires == null || wires.isEmpty() || wires.length() % 2 != 0) {
+            throw new IllegalAccessException("Invalid wire configuration.");
         }
         this.wires = map;
     }
