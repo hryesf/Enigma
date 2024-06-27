@@ -14,7 +14,16 @@ public class Plugboard {
         if (wires == null || wires.isEmpty() || wires.length() % 2 != 0) {
             throw new IllegalAccessException("Invalid wire configuration.");
         }
-        this.wires = map;
+
+        if (wires.length()/2 > 10){
+            throw new MaxWireException();
+        }
+
+        WIREMAP = new HashMap<>();
+
+        for(int i = 0; i < wires.length(); i += 2) {
+            WIREMAP.put(wires.charAt(i), wires.charAt(i+1));
+        }
     }
 
     public Character process(Character input) {
