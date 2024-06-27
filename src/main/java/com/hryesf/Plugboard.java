@@ -19,14 +19,22 @@ public class Plugboard {
             throw new MaxWireException();
         }
 
-        WIREMAP = new HashMap<>();
+        if (hasDuplicateCharacter(wires)){
+            throw new DuplicateLetterException();
+        }
+
+        wireMap = new HashMap<>();
 
         for(int i = 0; i < wires.length(); i += 2) {
             wireMap.put(wires.charAt(i), wires.charAt(i+1));
         }
     }
 
+    // in this function unfortunately we don't support searching based on value and find key value!!
     public Character process(Character input) {
-        return WIREMAP.getOrDefault(input, input);
+        if (wireMap.containsKey(input)) {
+            return wireMap.get(input);
+        }
+        return input;
     }
 }
