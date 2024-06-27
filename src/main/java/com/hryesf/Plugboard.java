@@ -48,7 +48,7 @@ public class Plugboard {
     }
 
     // this function will find the first duplicate character in input string
-    public boolean hasDuplicateCharacter(String input) {
+    private boolean hasDuplicateCharacter(String input) {
         final Set<Character> seen = new HashSet<>();
         for (char character : wires.toCharArray()) {
             if (seen.contains(character)){
