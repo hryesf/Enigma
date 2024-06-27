@@ -1,17 +1,17 @@
 package com.hryesf;
 
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
 import com.hryesf.Exceptions.DuplicateLetterException;
 import com.hryesf.Exceptions.MaxWireException;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 public class Plugboard {
 
     private final String wires;
-    private final Map<Character, Character> wireMap;
+    private final BiMap<Character, Character> wireMap;
 
     public Plugboard(String wires) throws IllegalAccessException {
         this.wires = wires;
@@ -28,19 +28,23 @@ public class Plugboard {
             throw new DuplicateLetterException();
         }
 
-        wireMap = new HashMap<>();
+        wireMap = HashBiMap.create();
 
         for(int i = 0; i < wires.length(); i += 2) {
             wireMap.put(wires.charAt(i), wires.charAt(i+1));
         }
     }
 
-    // in this function unfortunately we don't support searching based on value and find key value!!
     public Character process(Character input) {
         if (wireMap.containsKey(input)) {
             return wireMap.get(input);
+
+        } else if (wireMap.containsValue(input)) {
+            return wireMap.inverse().get(input);
+
+        }else {
+            return input;
         }
-        return input;
     }
 
     // this function will find the first duplicate character in input string
