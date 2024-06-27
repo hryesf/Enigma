@@ -9,12 +9,12 @@ import com.hryesf.Exceptions.MaxWireException;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Plugboard {
+public class PlugBoard {
 
     private final String wires;
     private final BiMap<Character, Character> wireMap;
 
-    public Plugboard(String wires) throws IllegalAccessException {
+    public PlugBoard(String wires) throws IllegalAccessException {
         this.wires = wires;
 
         if (wires == null || wires.isEmpty()) {
