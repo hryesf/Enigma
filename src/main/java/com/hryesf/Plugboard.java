@@ -27,11 +27,6 @@ public class Plugboard {
     }
 
     public Character process(Character input) {
-        boolean containsInput = wires.containsKey(input);
-        if (!containsInput) {
-            throw new InputMismatchException();
-        }
-
-        return wires.get(input);
+        return WIREMAP.getOrDefault(input, input);
     }
 }
