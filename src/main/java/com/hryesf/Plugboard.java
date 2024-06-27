@@ -5,7 +5,8 @@ import java.util.Map;
 
 public class Plugboard {
 
-    private final Map<Character, Character> wires;
+    private final String wires;
+    private final Map<Character, Character> WIREMAP;
 
     public Plugboard(Map<Character, Character> map) throws IllegalAccessException {
         if (map == null || map.isEmpty() || map.size() % 2 != 0) {
