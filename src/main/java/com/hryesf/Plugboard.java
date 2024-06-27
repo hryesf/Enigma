@@ -6,7 +6,7 @@ import java.util.Map;
 public class Plugboard {
 
     private final String wires;
-    private final Map<Character, Character> WIREMAP;
+    private final Map<Character, Character> wireMap;
 
     public Plugboard(String wires) throws IllegalAccessException {
         this.wires = wires;
@@ -22,7 +22,7 @@ public class Plugboard {
         WIREMAP = new HashMap<>();
 
         for(int i = 0; i < wires.length(); i += 2) {
-            WIREMAP.put(wires.charAt(i), wires.charAt(i+1));
+            wireMap.put(wires.charAt(i), wires.charAt(i+1));
         }
     }
 
