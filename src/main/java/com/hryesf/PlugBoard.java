@@ -29,7 +29,7 @@ public class PlugBoard {
             throw new MaxWireException();
         }
 
-        if (hasDuplicateCharacter(wires)){
+        if (hasDuplicateCharacter()){
             throw new DuplicateLetterException();
         }
 
@@ -53,7 +53,7 @@ public class PlugBoard {
     }
 
     // this function will find the first duplicate character in input string
-    private boolean hasDuplicateCharacter(String input) {
+    private boolean hasDuplicateCharacter() {
         final Set<Character> seen = new HashSet<>();
         for (char character : wires.toCharArray()) {
             if (seen.contains(character)){
