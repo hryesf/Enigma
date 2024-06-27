@@ -29,12 +29,12 @@ The `Plugboard` class you will implement will:
 
 ### Examples
 
-```python
-# Creating a plugboard with wire pairs
-plugboard = Plugboard("ABCDEFGHIJKLMNOPQRST")
+```java
+// Creating a plugboard with wire pairs
+Plugboard plugboard = new Plugboard("ABCDEFGHIJKLMNOPQRST");
 
-# Processing inputs
-print(plugboard.process('A'))  # Output: "B"
-print(plugboard.process('B'))  # Output: "A"
-print(plugboard.process('X'))  # Output: "X"
-print(plugboard.process('.'))  # Output: "."
+// Processing inputs
+System.out.println(plugboard.process('A'));  // Output: 'B'
+System.out.println(plugboard.process('B'));  // Output: 'A'
+System.out.println(plugboard.process('X'));  // Output: 'X'
+System.out.println(plugboard.process('.'));  // Output: '.'
