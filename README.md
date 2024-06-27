@@ -1,7 +1,5 @@
 # Enigma Machine Simulation - Part 1: The Plugboard
 
-Welcome to the third Domain-Driven Design master class! In this series of Kata, we will be implementing a software version of the Enigma Machine.
-
 ## Introduction
 
 The Enigma Machine was a crucial tool used during the Second World War for disguising military communications. Alan Turing, often considered the father of computing, developed concepts in response to the need to break these communications. Turing and his colleagues at Bletchley Park are credited with shortening WWII by two years, potentially saving an estimated 22 million lives.
